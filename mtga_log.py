@@ -2,8 +2,10 @@ from __future__ import print_function
 from future.utils import iteritems
 import os
 import simplejson as json
-import scryfall
 import re
+import importlib
+
+scryfall = importlib.import_module(__name__, 'scryfall')
 
 
 def _mtga_file_path(filename):
